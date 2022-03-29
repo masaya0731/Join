@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-white edit-page-heading"><strong>ユーザー情報編集</strong></h3>
+    <%= form_with model: @user, url: public_user_path, local: true do |f| %>
+      <div class="field row form-group mt-3">
+        <%= f.label :プロフィール画像, class: "col-12" %>
+        <%= f.attachment_field :profile_image %><br>
+      </div>
+
+      <div class="field row form-group">
+        <%= f.label :ユーザー名, class: "col-12" %>
+        <%= f.text_field :name %><br>
+      </div>
+
+      <div class="field form-group row">
+        <%= f.label :自己紹介（100文字以内）, class: "col-12" %>
+        <%= f.text_area :introduction, autofocus: true %><br>
+      </div>
+
+      <div class="row">
+        <%= f.submit "編集内容を保存", class: "mt-4" %>
+      </div>
+    <% end %>
+  </div>
+</div>
