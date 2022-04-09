@@ -8,8 +8,10 @@ Rails.application.routes.draw do
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
+
   namespace :public do
     resources :users, only: %i[show edit update]
+    resources :posts
   end
 
 

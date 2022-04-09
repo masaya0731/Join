@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 2022_04_04_150738) do
     t.integer "user_id"
     t.integer "category_id"
     t.string "title"
+    t.string "body"
     t.string "post_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

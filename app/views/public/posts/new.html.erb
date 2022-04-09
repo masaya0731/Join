@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="col-12 text-white">募集する</h3>
+      <%= form_with model:@post, url: public_posts_path, local: true do |f| %>
+
+        <div class="row form-group ml-1">
+          <%= f.label :カテゴリー, class: "" %>
+          <%= f.text_field :category_id %>
+        </div>
+
+        <div class="row form-group">
+          <%= f.label :タイトル, class: "" %>
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="field row form-group mt-3">
+          <%= f.label :画像, class: "" %>
+          <%= f.attachment_field :post_image, class: "" %><br>
+        </div>
+
+        <div class="row form-group">
+          <%= f.label :投稿内容, class: ""%>
+          <%= f.text_area :body, size: "1x9", class: "" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "投稿する", class: 'offset-1' %>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@
   <div class="row">
     <h3 class="text-white edit-page-heading"><strong>ユーザー情報編集</strong></h3>
     <%= form_with model: @user, url: public_user_path, local: true do |f| %>
+    
       <div class="field row form-group mt-3">
         <%= f.label :プロフィール画像, class: "col-12" %>
         <%= f.attachment_field :profile_image %><br>
