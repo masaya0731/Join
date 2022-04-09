@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  # 投稿（募集）
   attachment :post_image
 
   belongs_to :user
