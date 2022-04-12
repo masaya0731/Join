@@ -4,11 +4,6 @@
       <h3 class="col-12 text-white">募集する</h3>
       <%= form_with model:@post, url: public_posts_path, local: true do |f| %>
 
-        <div class="row form-group ml-1">
-          <%= f.label :カテゴリー, class: "" %>
-          <%= f.text_field :category_id %>
-        </div>
-
         <div class="row form-group">
           <%= f.label :タイトル, class: "" %>
           <%= f.text_field :title %>
