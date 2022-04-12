@@ -1,6 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-12">マイページ</div>
-    <%= link_to "プロフィール編集", edit_public_user_path(@user) %>
+    <div class="user-profile">
+      <%= attachment_image_tag @user, :profile_image, size: "150x150", fallback: "no-image.png", class: "user-image" %><br>
+      <span class="text-white"><%= @user.name %></span><br>
+      <span class="text-white"><%= @user.introduction %></span><br>
+
+      <%= link_to "プロフィール編集", edit_public_user_path(@user) %>
+      <%= link_to "過去の投稿", public_users_post_all_path %>
+    </div>
   </div>
 </div>
