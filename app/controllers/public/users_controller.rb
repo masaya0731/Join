@@ -4,6 +4,11 @@ class Public::UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def post_all
+    @user = User.find(params[:id])
+    #@posts = @user.posts.all
+  end
+
   def edit
     @user = User.find(params[:id])
   end
