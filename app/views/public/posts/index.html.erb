@@ -1,3 +1,4 @@
 <% @posts.each do |post| %>
-  <h1 class="text-white"><%= link_to public_post_path(post.id) do %><%= post.title %><% end %></h1>
+  <h1 class="text-white"><%= post.title %></h1>
+  <h1 class="text-white"><%= post.body %></h1>
 <% end %>
