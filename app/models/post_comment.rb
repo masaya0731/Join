@@ -3,6 +3,6 @@ class PostComment < ApplicationRecord
   attachment :post_comment_image
 
   belongs_to :user
-  belongs_to :post
+  #belongs_to :post
 
 end
