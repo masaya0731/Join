@@ -21,6 +21,7 @@
             <li><%= link_to "Recruit", new_public_post_path, class: "text-white" %></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-white" %></li>
           <% elsif admin_signed_in?%>
+            <li><%= link_to "Category", admin_categories_path, class: "text-white" %></li>
             <li><%= link_to "Log out", destroy_admin_session_path, method: :delete, class: "text-white" %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path, class: "text-white" %></li>
