@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'homes#top'
-    resources :categories, only: %i[index create edit destroy]
+    resources :categories, only: %i[index create edit update destroy]
   end
 
 end

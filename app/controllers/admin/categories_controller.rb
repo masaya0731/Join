@@ -15,6 +15,10 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
   end
 
   def destroy
