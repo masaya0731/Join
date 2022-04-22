@@ -4,6 +4,11 @@
       <h3 class="col-12 text-white">募集する</h3>
       <%= form_with model:@post, url: public_posts_path, local: true do |f| %>
 
+        <div class="row form-group ml-1">
+          <%= f.label :カテゴリー, class: "offset-1 mr-5 mt-4" %>
+          <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: "選択して下さい" %>
+        </div>
+
         <div class="row form-group">
           <%= f.label :タイトル, class: "" %>
           <%= f.text_field :title %>
